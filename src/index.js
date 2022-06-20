@@ -14,7 +14,8 @@ import donutpicIMG from "./images/donut.png";
 import coffeePicIMG from "./images/coffeecup.png";
 import starpicIMG from "./images/starsprite.png";
 import starlogoIMG from "./images/starlogo.png";
-import saturnIMG from "./images/saturn.png";
+import saturnBigIMG from "./images/saturn.png";
+import saturnSmallIMG from "./images/saturnSmall.png";
 import firepicIMG from "./images/fireball.png";
 
 
@@ -93,8 +94,11 @@ starpic.src = starpicIMG;
 const starlogo = new Image();
 starlogo.src = starlogoIMG;
 
-const saturn = new Image();
-saturn.src = saturnIMG;
+const saturnBig = new Image();
+saturnBig.src = saturnBigIMG;
+
+const saturnSmall = new Image();
+saturnSmall.src = saturnSmallIMG;
 
 const firepic = new Image();
 firepic.src = firepicIMG;
@@ -102,7 +106,8 @@ firepic.src = firepicIMG;
 
 var imagelist = [backdrop, rocketpic,
   rocketlogo, ufopic1, ufopic2, donutpic,
-  coffeepic, starpic, starlogo, saturn, firepic];
+  coffeepic, starpic, starlogo, saturnBig, saturnSmall,
+   firepic];
 
 var imageload = 0;
 
@@ -299,7 +304,7 @@ function startpage() {
   context.drawImage(backdrop, 0, 0, 800, 400);
 
   context.beginPath();
-  context.drawImage(saturn, -250, -250, 1000, 1000);
+  context.drawImage(saturnBig, -250, -250, 1000, 1000);
 
   context.beginPath();
   context.drawImage(ufopic1, 660, -25, 300, 300);
@@ -599,7 +604,7 @@ function drawLives() {
   // }
   for (var l in lifemeter) {
     context.beginPath();
-    context.drawImage(saturn, s, 5, 30, 30);
+    context.drawImage(saturnSmall, s, 5, 30, 30);
     s += 55;
   }
 }
