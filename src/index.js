@@ -34,13 +34,8 @@ const startButton = document.getElementById("startButton");
 const restartButton = document.getElementById("restartButton");
 const fireButton = document.getElementById("fireButton");
 const gameControls = document.getElementById("gameControls");
-const directions = document.getElementById("directions");
 
-
-var displayScore = document.getElementById("score");
 var score;
-
-var displayLives = document.getElementById("lives");
 var lives;
 
 var loop = false;
@@ -48,15 +43,6 @@ var loop = false;
 var j;
 
 var x = 375;
-var y;
-
-var p;
-var q;
-
-var a;
-var b;
-var w;
-var h;
 
 var t = Date.now();
 var timePassed;
@@ -123,11 +109,9 @@ var imageload = 0;
 for (var i=0; i<imagelist.length; i++) {
   imagelist[i].onload = function() {
     imageload += 1;
-    console.log("LOADING!", i, imageload, imagelist.length);
 
-    if (imageload == imagelist.length) {
+    if (imageload === imagelist.length) {
       startpage();
-      console.log("START!");
     }
   }
 }
@@ -217,27 +201,27 @@ const ufo2 = new enemyUFO(ufopic2, 800, Math.floor(Math.random() * 340));
 
 // Handle the event for up and down keyboard keys
 function keydown(event) {
-  if (event.code == "Numpad8" || event.code == "KeyK") {
+  if (event.code === "Numpad8" || event.code === "KeyK") {
     dir = 1;
   }
 
-  if (event.code == "Numpad2" || event.code == "KeyD") {
+  if (event.code === "Numpad2" || event.code === "KeyD") {
     dir = 2;
   }
 
-  // if (fire > 0 && event.code == "ShiftLeft") {
+  // if (fire > 0 && event.code === "ShiftLeft") {
   //   didfire = true;
   // }
   //
-  // if (fire > 0 && event.code == "ShiftRight") {
+  // if (fire > 0 && event.code === "ShiftRight") {
   //   didfire = true;
   // }
 
-  if (fire > 0 && event.code == "Space") {
+  if (fire > 0 && event.code === "Space") {
     didfire = true;
   }
 
-  if (event.code == "Enter" && loop == false) {
+  if (event.code === "Enter" && loop === false) {
     hideStart();
     resetStats();
     resetSprites();
@@ -245,7 +229,7 @@ function keydown(event) {
     draw();
   }
 
-  else if (event.code == "Enter" && loop == true) {
+  else if (event.code === "Enter" && loop === true) {
     loop = false;
     hideRestart();
     resetStats();
@@ -256,11 +240,11 @@ function keydown(event) {
 
 
 function keyup(event) {
-  if (event.code == "Numpad8" || event.code == "KeyK") {
+  if (event.code === "Numpad8" || event.code === "KeyK") {
     dir = 12;
   }
 
-  if (event.code == "Numpad2" || event.code == "KeyD") {
+  if (event.code === "Numpad2" || event.code === "KeyD") {
     dir = 22;
   }
 }
@@ -403,10 +387,6 @@ function resetStats() {
   fire = 1;
   dir = 0;
   j = 0;
-
-  y = 150;
-  a = 800;
-  p = 800;
 }
 
 
@@ -461,19 +441,19 @@ function drawRocket(rocket) {
 
 
 
-  if (dir == 1 && rocket.y > 0) {
+  if (dir === 1 && rocket.y > 0) {
     rocket.y -= (2 * speed * timePassed);
   }
 
-  else if (dir == 12 && rocket.y > 0) {
+  else if (dir === 12 && rocket.y > 0) {
     rocket.y -= (0.5 * speed * timePassed);
   }
 
-  else if (dir == 2 && rocket.y < 285) {
+  else if (dir === 2 && rocket.y < 285) {
     rocket.y += (2 * speed * timePassed);
   }
 
-  else if (dir == 22 && rocket.y < 285) {
+  else if (dir === 22 && rocket.y < 285) {
     rocket.y += (0.5 * speed * timePassed);
   }
 }
@@ -497,11 +477,11 @@ function drawStar(star, rocket) {
 
       score += 1;
 
-      if (score > 0 && score % 30 == 0) {
+      if (score > 0 && score % 30 === 0) {
         fire += 1;
       }
 
-      if (score > 0 && score % 50 == 0) {
+      if (score > 0 && score % 50 === 0) {
         lives += 1;
       }
     }
@@ -727,23 +707,23 @@ function draw() {
     drawStar(star2, player1);
   }
 
-  if (count > 0 && count % 1000 == 0) {
+  if (count > 0 && count % 1000 === 0) {
     showfire = true;
   }
 
-  if (showfire == true) {
+  if (showfire === true) {
     drawFireball(fireball1, player1);
   }
 
-  if (count > 0 && count % 2000 == 0) {
+  if (count > 0 && count % 2000 === 0) {
     showlife = true;
   }
 
-  if (showlife == true) {
+  if (showlife === true) {
     drawDonut(donut1, player1);
   }
 
-  if (didfire == true && fire > 0) {
+  if (didfire === true && fire > 0) {
     launchfire(player1);
   }
 
@@ -753,17 +733,17 @@ function draw() {
 
   drawScore();
 
-  if (count > 0 && count % 100 == 0) {
+  if (count > 0 && count % 100 === 0) {
     speedup();
   }
 
   count += 1;
 
-  if (lives > 0 && loop == true) {
+  if (lives > 0 && loop === true) {
     window.requestAnimationFrame(draw);
   }
 
-  else if (lives > 0 && loop == false) {
+  else if (lives > 0 && loop === false) {
     // stopFall();
     startpage();
   }

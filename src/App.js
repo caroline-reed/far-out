@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   toggleCredits = () => {
-    if (document.getElementById("creditsPage").style.display == "block") {
+    if (document.getElementById("creditsPage").style.display === "block") {
       document.getElementById("creditsPage").style.display = "none";
       document.getElementById("openCredits").style.display = "block";
       document.getElementById("closeCredits").style.display = "none";
