@@ -1,13 +1,211 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  background-position: center;
+  background-size: 100%;
+  color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+#mainWindow {
+  position: relative;
+  margin: 0 12.5%;
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: [row1-start] 7% [row2-start] 73% [row3-start] 20% [row3-end];
+  grid-template-areas:
+  "title"
+  "canvas"
+  "controls";
+}
+
+#mainWindow .griditem-main {
+  width: 100%;
+  height: auto;
+}
+
+#mainWindow h1 {
+  grid-area: title;
+  margin: 1% 0;
+  color: lightgray;
+  font-size: 180%;
+}
+
+#canvas {
+  grid-area: canvas;
+  width: 100%;
+  border: thin outset silver;
+  border-radius: 0.15rem;
+}
+
+#creditsPage {
+  display: none;
+  grid-area: canvas;
+  width: 100%;
+  min-height: 63.85vh;
+  border: thin outset silver;
+  border-radius: 0.15rem;
+}
+
+
+#creditsPage h2 {
+  text-align: center;
+  padding: 2.5rem 0 1.5rem;
+}
+
+#creditsPage h3 {
+  font-size: 125%;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+#creditsPage ul {
+  list-style-type: none;
+  padding: 0 1.5rem;
+}
+
+
+#creditsPage ul li {
+  list-style-type: none;
+  font-size: 125%;
+  padding: 0 0 1rem;
+}
+
+
+#creditsPage #designDetails {
+  text-align: center;
+  margin: 0 0 2rem 0;
+  padding:
+}
+
+
+#creditsPage #designDetails #gameLangs {
+  padding: 0;
+}
+
+
+#creditsPage #designDetails #gameLangs li {
+  display: inline;
+  padding: 0 5rem 0 0;
+}
+
+
+#creditsButtonDiv {
+  position: absolute;
+  width: 20%;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+}
+
+
+#creditsButton {
+  position: relative;
+  font-size: 195%;
+  width: 100%;
+  max-width: 10rem;
+  padding: 1rem 0;
+  height: 100%;
+  background: none;
+  border: 0.15rem solid deepskyblue;
+  border-radius: 1rem;
+  color: yellow;
+  cursor: pointer;
+}
+
+
+#creditsButton #closeCredits {
+  display: none;
+}
+
+
+#startPanel {
+  grid-area: controls;
+  width: 100%;
+  /* height: 5rem; */
+}
+
+
+#startPanel #startButton {
+  font-size: 325%;
+  font-family: monospace;
+  font-weight: bold;
+  margin: 0 0 1%;
+  width: 100%;
+}
+
+
+#gameInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+#directions {
+  width: 85%;
+  font-size: 160%;
+  text-align: left;
+}
+
+
+#directions #eeriePoints {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+#eerie {
+  text-align: right;
+  color: lightblue;
+  font-style: italic;
+}
+
+
+#startPanel #gameControls {
+  display: none;
+  /* margin: 1% 0; */
+  width: 100%;
+}
+
+
+#gameControls button {
+  font-family: monospace;
+  font-size: 350%;
+  font-weight: bold;
+  width: 33.33%;
+}
+
+
+#gameControls #fireButton {
+  background-color: red;
+}
+
+
+#gameControls #restartButton {
+  width: 100%;
+  margin: 1% 0;
+}
+
+#gameControls #controlsXp {
+  display: flex;
+  font-size: 170%;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: visible;
 }
