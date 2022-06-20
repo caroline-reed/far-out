@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/far-out/static/css/main.8d6c86d5.css",
+    "main.js": "/far-out/static/js/main.522f230a.js",
+    "static/js/787.ee20f02f.chunk.js": "/far-out/static/js/787.ee20f02f.chunk.js",
+    "static/media/starry-night-sky.jpg": "/far-out/static/media/starry-night-sky.09dd8a8a68f382cf58dc.jpg",
+    "static/media/gameoverdonut.jpg": "/far-out/static/media/gameoverdonut.9073d663216048b44e56.jpg",
+    "static/media/saturn.png": "/far-out/static/media/saturn.316b25fba5607fc9a627.png",
+    "static/media/probe.png": "/far-out/static/media/probe.81999003ba68726a10d3.png",
+    "static/media/ufocolor2.png": "/far-out/static/media/ufocolor2.0ff9cb99b88c5bc42c7b.png",
+    "static/media/ufocolor.png": "/far-out/static/media/ufocolor.a459fa2891f7068040bb.png",
+    "static/media/starlogo.png": "/far-out/static/media/starlogo.bf6487b11f1524a4cdd9.png",
+    "static/media/coffeecup.png": "/far-out/static/media/coffeecup.10542a751826ee210b9d.png",
+    "static/media/donut.png": "/far-out/static/media/donut.bd30c5084bd0d798befe.png",
+    "static/media/fireball.png": "/far-out/static/media/fireball.7d947adf78d8d948ec02.png",
+    "static/media/starsprite.png": "/far-out/static/media/starsprite.18ee156bfbdecfc5eba6.png",
+    "index.html": "/far-out/index.html",
+    "main.8d6c86d5.css.map": "/far-out/static/css/main.8d6c86d5.css.map",
+    "main.522f230a.js.map": "/far-out/static/js/main.522f230a.js.map",
+    "787.ee20f02f.chunk.js.map": "/far-out/static/js/787.ee20f02f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d6c86d5.css",
+    "static/js/main.522f230a.js"
+  ]
+}
